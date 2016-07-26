@@ -49,7 +49,7 @@ window.EagerFacebookComments = {
       element.innerHTML = '' +
         '<style>' +
           'eager-facebook-comments { display: block !important; width: 100% !important; height: 500px !important; max-height: 80vh !important; background: #dde2ec !important; position: relative !important; border: 1px solid #3b5998 !important }' +
-          'eager-facebook-comments:before { content: "Facebook Comments" !important; display: block !important; height: 2em !important; line-height: 1.5em !important; position: absolute !important; font-size: 2em !important; color: #3b5998 !important; text-align: center !important; width: 80% !important; overflow: hidden !important; top: 0 !important; right: 0 !important; bottom: 0 !important; left: 0 !important; margin: auto !important; white-space: nowrap !important; text-overflow: ellipsis }' +
+          'eager-facebook-comments:before { content: "Facebook Comments" !important; display: block !important; height: 2em !important; line-height: 1.5em !important; position: absolute !important; font-size: 1.5em !important; color: #3b5998 !important; text-align: center !important; width: 80% !important; overflow: hidden !important; top: 0 !important; right: 0 !important; bottom: 0 !important; left: 0 !important; margin: auto !important; white-space: nowrap !important; text-overflow: ellipsis }' +
         '</style>' +
         '<eager-facebook-comments></eager-facebook-comments>' +
       '';
