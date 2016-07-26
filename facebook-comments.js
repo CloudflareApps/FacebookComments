@@ -44,7 +44,7 @@ window.EagerFacebookComments = {
     }(document, 'script', 'facebook-jssdk'));
 
     element.innerHTML = '' +
-      '<style>eager-app .fb-comments, eager-app .fb-comments iframe[style], eager-app .fb-comments > span { width: 100% !important }</style>' +
+      '<style>eager-app .fb-comments { background: #fff } eager-app .fb-comments, eager-app .fb-comments iframe[style], eager-app .fb-comments > span { width: 100% !important }</style>' +
       '<div class="fb-comments" data-href="' + canonicalUrl + '" data-numposts="' + options.numPosts + '"></div>' +
     '';
   }
