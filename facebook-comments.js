@@ -2,6 +2,8 @@ window.EagerFacebookComments = {
   init: function(element, options) {
     if (!element.parentNode) return;
 
+    var isPreview = INSTALL_ID === 'preview';
+
     var getFullPath = function(path) {
       var a = document.createElement('a');
       a.href = path;
@@ -43,9 +45,16 @@ window.EagerFacebookComments = {
       fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));
 
-    element.innerHTML = '' +
-      '<style>eager-app .fb-comments { background: #fff } eager-app .fb-comments, eager-app .fb-comments iframe[style], eager-app .fb-comments > span { width: 100% !important }</style>' +
-      '<div class="fb-comments" data-href="' + canonicalUrl + '" data-numposts="' + options.numPosts + '"></div>' +
-    '';
+    if (true || isPreview) {
+      element.innerHTML = '' +
+        '<style>eager-facebook-comments { display: block !important; width: 100% !important; height: 500px !important; max-height: 80vh !important; background: #3b5998 !important }</style>' +
+        '<eager-facebook-comments></eager-facebook-comments>' +
+      '';
+    } else {
+      element.innerHTML = '' +
+        '<style>eager-app .fb-comments { background: #fff } eager-app .fb-comments, eager-app .fb-comments iframe[style], eager-app .fb-comments > span { width: 100% !important }</style>' +
+        '<div class="fb-comments" data-href="' + canonicalUrl + '" data-numposts="' + options.numPosts + '"></div>' +
+      '';
+    }
   }
 };
