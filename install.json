@@ -1,0 +1,31 @@
+{
+  "resources": {
+    "body": [
+      {
+        "type": "script",
+        "src": "./facebook-comments.js"
+      },
+      {
+        "type": "script",
+        "contents": "EagerFacebookComments.init(Eager.createElement(INSTALL_OPTIONS.location), INSTALL_OPTIONS)"
+      }
+    ]
+  },
+  "options": {
+    "properties": {
+      "location": {
+        "title": "Location",
+        "type": "object",
+        "format": "element",
+        "description": "Specify where you would like the Facebook Comments box to appear.",
+        "order": 1
+      },
+      "numPosts": {
+        "order": 2,
+        "title": "Number of Posts",
+        "type": "number",
+        "default": 5
+      }
+    }
+  }
+}

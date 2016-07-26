@@ -1,0 +1,20 @@
+<body>
+  <eager-app></eager-app>
+  <style>
+    eager-app {
+      display: block;
+      margin: 0 auto;
+      width: 600px;
+      max-width: 80%;
+    }
+  </style>
+  <script src="facebook-comments.js"></script>
+  <script>
+    EagerFacebookComments.init(document.querySelector('eager-app'), {
+      "location": {
+        "selector": "body",
+        "method": "append"
+      },
+      "numPosts": 5
+    });
+  </script>
