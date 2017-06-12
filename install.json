@@ -2,12 +2,24 @@
   "resources": {
     "body": [
       {
-        "type": "script",
-        "src": "./facebook-comments.js"
+        "type": "style",
+        "src": "./source/app.css"
       },
       {
         "type": "script",
-        "contents": "EagerFacebookComments.init(Eager.createElement(INSTALL_OPTIONS.location), INSTALL_OPTIONS)"
+        "src": "./source/app.js"
+      }
+    ]
+  },
+  "preview": {
+    "handlers": [
+      {
+        "options": ["location", "numPosts"],
+        "execute": "INSTALL_SCOPE.setOptions(INSTALL_OPTIONS)"
+      },
+      {
+        "options": ["position"],
+        "execute": "INSTALL_SCOPE.setPosition(INSTALL_OPTIONS)"
       }
     ]
   },
@@ -17,7 +29,7 @@
         "title": "Location",
         "type": "object",
         "format": "element",
-        "description": "Specify where you would like the Facebook Comments box to appear.",
+        "description": "Where should the Facebook Comments box appear?",
         "order": 1
       },
       "numPosts": {
@@ -25,6 +37,18 @@
         "title": "Number of Posts",
         "type": "number",
         "default": 5
+      },
+      "position": {
+        "order": 3,
+        "type": "string",
+        "default": "center",
+        "title": "Position",
+        "enum": ["left", "center", "right"],
+        "enumNames": {
+          "left": "Left",
+          "center": "Center",
+          "right": "Right"
+        }
       }
     }
   }

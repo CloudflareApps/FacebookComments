@@ -1,0 +1,62 @@
+cloudflare-app[app="facebook-comments"] {
+  display: block;
+  display: flex;
+}
+
+@media (max-width: 768px) {
+  cloudflare-app[app="facebook-comments"] .fb-comments {
+    width: 100% !important;
+  }
+}
+
+@media (min-width: 768px) {
+  cloudflare-app[app="facebook-comments"] {
+    padding: .5em;
+  }
+}
+
+cloudflare-app[app="facebook-comments"] .fb-comments {
+  flex: 0 0 auto;
+}
+
+cloudflare-app[app="facebook-comments"][data-position="left"] {
+  justify-content: flex-start;
+}
+
+cloudflare-app[app="facebook-comments"][data-position="center"] {
+  justify-content: center;
+}
+
+cloudflare-app[app="facebook-comments"][data-position="right"] {
+  justify-content: flex-end;
+}
+
+cloudflare-app[app="facebook-comments"] .fb-comments iframe[style],
+cloudflare-app[app="facebook-comments"] .fb-comments .cf-iframe-placeholder {
+  background: #fff !important;
+  border: 1px solid !important;
+  border-color: #e5e6e9 #dfe0e4 #d0d1d5 !important;
+  border-radius: 3px !important;
+}
+
+cloudflare-app[app="facebook-comments"] .fb-comments .cf-iframe-placeholder {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  font-family: sans-serif;
+  width: 550px;
+  height: 180px;
+}
+
+cloudflare-app[app="facebook-comments"] .fb-comments .cf-iframe-placeholder::before {
+  content: "Facebook Comments";
+  font-size: 1.5em;
+  margin-bottom: 1em;
+  display: block;
+}
+
+cloudflare-app[app="facebook-comments"] .fb-comments .cf-iframe-placeholder::after {
+  content: "Preview in separate window for live demo.";
+  display: block;
+}
