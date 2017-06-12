@@ -57,6 +57,6 @@ cloudflare-app[app="facebook-comments"] .fb-comments .cf-iframe-placeholder::bef
 }
 
 cloudflare-app[app="facebook-comments"] .fb-comments .cf-iframe-placeholder::after {
-  content: "Preview in separate window for live demo.";
+  content: "Preview in separate window for a live demo.";
   display: block;
 }
